@@ -8,7 +8,7 @@ const Home = () => {
     <div className="grid grid-cols-12 gap-20">
       <Filter />
       <Products />
-      {/* <EmptyCart /> */}
+    {/* <EmptyCart /> */}
     </div>
   );
 };

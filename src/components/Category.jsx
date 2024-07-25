@@ -1,14 +1,7 @@
 import React from "react";
 
-const Category = ({ children, click, selected }) => {
-  return (
-    <li
-      onClick={click}
-      className={`cursor-pointer  text-black  ${selected && "font-black"}`}
-    >
-      {children}
-    </li>
-  );
+const Category = () => {
+  return <li className={`cursor-pointer text-black font-black`}>T-shirt</li>;
 };
 
 export default Category;

@@ -4,13 +4,21 @@ import Size from "./Size";
 // Images
 import Cart from "../images/cart.png";
 
-const ProductFilter = () => {
+// Hooks
+import { useState } from "react";
+
+const ProductFilter = (props) => {
   return (
     <div className="col-span-4">
       {/* Color */}
       <div className="mb-10">
         <h3 className="text-xs font-bold mb-3">Product color</h3>
-        <div className="h-8 w-8 bg-orange-500 rounded-full"></div>
+        <div
+          style={{
+            backgroundColor: "red",
+          }}
+          className="h-8 w-8 rounded-full"
+        ></div>
       </div>
       {/* Size */}
       <div className="mb-28">

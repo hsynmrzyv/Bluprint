@@ -1,8 +1,5 @@
-
-
 // Images
-import Cap from "../images/cap.png";
-import Tshirt from "../images/t-shirt.png";
+import { useEffect, useState } from "react";
 
 // Components
 import Product from "./Product";
@@ -13,15 +10,7 @@ const Products = () => {
       <div className="mb-4">
         <h1 className="font-medium">Showing 2 results</h1>
       </div>
-      <div className="grid grid-cols-12 gap-5">
-        <Product img={Cap} category="caps" price="13.99" title="Varsity Cap" />
-        <Product
-          img={Tshirt}
-          category="T-shirts"
-          price="24.99"
-          title="T-shirt"
-        />
-      </div>
+      <div className="grid grid-cols-12 gap-5"></div>
     </div>
   );
 };

@@ -13,6 +13,7 @@ import { useSelector } from "react-redux";
 // Styles
 const styles = {
   btn: "flex justify-between items-center py-4 w-full ",
+  btn: "flex justify-between items-center py-4 w-full ",
   ul: "text-sm font-medium flex flex-col gap-5 pb-4",
   icon: "duration-200 w-4 h-4",
 };
@@ -28,7 +29,7 @@ const Categories = () => {
 
   return (
     <div className="border-b">
-      <button onClick={toggleCategories} className={styles.btn}>
+      <button className={styles.btn}>
         <span className="font-bold">Category</span>
         <div>
           <Chevron

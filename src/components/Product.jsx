@@ -6,7 +6,7 @@ const Product = ({ id, img, title, price, category }) => {
     <div className="col-span-4 cursor-pointer">
       <Link to={`/products/${id}`}>
         <div className="mb-4 border border-neutral-200 rounded-lg">
-          <img src={img} alt="" className="w-full" />
+          <img src={Tshirt} alt="" className="w-full" />
         </div>
         <div className="flex justify-between font-bold">
           <div>

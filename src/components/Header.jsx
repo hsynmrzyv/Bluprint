@@ -6,6 +6,9 @@ import Logo from "../images/Logo.png";
 import Search from "../images/search.png";
 import Cart from "../images/cart.png";
 
+// Hooks
+import { useSelector } from "react-redux";
+
 // Styles
 const styles = {
   header: "my-10 flex items-center justify-between font-satoshi",
@@ -14,10 +17,14 @@ const styles = {
   li: "text-3xl font-black",
   span: "text-yellow-400",
   btnGroup: "flex gap-5",
-  btn: "bg-[#1d1d1d] border-2 transition-all duration-200 hover:border-yellow-400 h-12 w-12 flex items-center justify-center rounded-full",
+  btn: "bg-[#1d1d1d] border-4 transition-all duration-200 hover:border-yellow-400 h-12 w-12 flex items-center justify-center rounded-full relative",
 };
 
 const Header = () => {
+  const cartItems = useSelector((state) => state.cart).map(
+    (cartItem) => cartItem.quantity
+  );
+
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -53,6 +60,11 @@ const Header = () => {
         <Link to="/cart">
           <button className={styles.btn}>
             <img src={Cart} alt="cart" className="w-4" />
+            {cartItems?.length > 0 && (
+              <span className="h-5 w-5 flex items-center justify-center rounded-full bg-yellow-400 text-black text-xs font-black absolute -right-[10px]">
+                {cartItems.reduce((sum, number) => sum + +number)}
+              </span>
+            )}
           </button>
         </Link>
         <button className={styles.btn}>
